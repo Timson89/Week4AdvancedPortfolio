@@ -8,6 +8,9 @@
   <title>Timothy Olofson</title>
 </head>
 <body>
+
+<!-- LANDING PAGE-->
+
   <section id="landing-page">
 
     <!-- NAVIGATION -->
@@ -46,25 +49,61 @@
       </ul>
     </nav>
 
-    <!-- HEADER -->
+    <!-- HEADER AREA-->
 
     <header class="header">
       <div class="header__content">
         <h1 class="title">Hi,</h1>
         <h1 class="title blue">I'm Tim.</h1>
-        <p class="header__para">
-          I'm A <b class="blue">Frontend Software Engineer</b> with A strong passion for building web applications with great user experiences.
-        <br>Here's more <b class="blue">about me.</b>
-        </p>
+        <p class="header__para">I'm A <b class="blue">Frontend Software Engineer</b> with A strong passion for building web applications with great user experiences.<br>Here's more <b class="blue">about me.</b></p>
         <div class="social__links">
-          <a href="#" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" class="social__link click"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/timothyolofson" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Timson89" class="social__link click"><i class="fa-brands fa-github"></i></a>
           <a href="#" class="social__link click"><i class="fa-regular fa-file-pdf"></i></a>
         </div>
       </div>
     </header>
-      <button class="mail__btn click"><i class="fa-solid fa-envelope"></i></button>
-      <a href="#projects" class="scroll"><div class="scroll__icon click"></div></a>
+    <button class="mail__btn click"><i class="fa-solid fa-envelope"></i></button>
+    <a href="#projects" class="scroll"><div class="scroll__icon click"></div></a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's A Bit About Me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+        <p class="modal__para modal__para--about">I'm A 35 year-old American Frontend Software Engineer with A passion for developing websites with great user experiences.<br>I currently work on extremely difficult and complex engineering problems and learn from A team consisting of some of the most talented nd experienced software engineers everyday.</p>
+        <div class="modal__languages">
+          <div class="modal__language">
+            <figure class="modal__language--img"><i class="fa-brands fa-html5"></i><span class="language__name html5">HTML5</span></figure>
+          </div>
+          <div class="modal__language">
+            <figure class="modal__language--img"><i class="fa-brands fa-css3-alt"></i><span class="language__name">CSS3</span></figure>
+          </div>
+          <div class="modal__language">
+            <figure class="modal__language--img"><i class="fa-brands fa-js"></i><span class="language__name javascript">JAVASCRIPT</span></figure>
+          </div>
+          <div class="modal__language">
+            <figure class="modal__language--img"><i class="fa-brands fa-react"></i><span class="language__name">REACT</span></figure>
+          </div>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <h3 class="modal__title moddal__title--contact">Let's Have A Chat!</h3>
+        <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
+        <form id="contact__form" action="">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="textbox" name="message" type="text" required>Type here...</textarea>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
   <section id="projects">
     <div class="container">
@@ -73,12 +112,52 @@
         <ul class="projects">
           <li class="project">
             <div class="project__wrapper">
-              <img class="project_img" src="assets/undraw_programming_re_kg9v.svg" alt="Man on A desktop computer">
-              <div class="project__wrapper--bg">
-                
-              </div>
+              <img class="project__img" src="assets/undraw_programming_re_kg9v.svg" alt="Man on A desktop computer">
+              <div class="project__wrapper--bg"></div>
               <div class="project__description">
-                <h3 class="project__description--title">Car Sales Project</h3>
+                <h3 class="project__description--title">Online Book Store Project</h3>
+                <h4 class="project__description--sub-title">HTML, CSS, Javascript, React</h4>
+                <p class="project__description--para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quasi voluptates architecto suscipit inventore exercitationem possimus quos sunt repellat beatae, officiis similique quaerat facere! Quibusdam pariatur cupiditate itaque omnis laborum.</p>
+                <div class="project__description--links">
+                  <a href="#" class="project__description--link"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="project__description--link"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <ul class="projects">
+          <li class="project">
+            <div class="project__wrapper">
+              <img class="project__img" src="assets/undraw_programming_re_kg9v.svg" alt="Man on A desktop computer">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">Online Book Store Project</h3>
+                <h4 class="project__description--sub-title">HTML, CSS, Javascript, React</h4>
+                <p class="project__description--para">I'm A 35 year-old American Frontend Software Engineer with A passion for developing websites with great user experiences.<br>I currently work on extremely difficult and complex engineering problems and learn from A team consisting of some of the most talented nd experienced software engineers everyday.</p>
+                <div class="project__description--links">
+                  <a href="#" class="project__description--link"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="project__description--link"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <ul class="projects">
+          <li class="project">
+            <div class="project__wrapper">
+              <img class="project__img" src="assets/undraw_programming_re_kg9v.svg" alt="Man on A desktop computer">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">Online Book Store Project</h3>
                 <h4 class="project__description--sub-title">HTML, CSS, Javascript, React</h4>
                 <p class="project__description--para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quasi voluptates architecto suscipit inventore exercitationem possimus quos sunt repellat beatae, officiis similique quaerat facere! Quibusdam pariatur cupiditate itaque omnis laborum.</p>
                 <div class="project__description--links">
@@ -92,5 +171,42 @@
       </div>
     </div>
   </section>
+
+<!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure><img class="footer__logo--img" src="assets/MyE-PortfolioLogo_FES.png" alt="My Logo"></figure>
+        <div class="footer__social--list">
+          <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">GitHub
+          </a>
+          <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">LinkedIn
+          </a>
+          <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">Contact
+          </a>
+          <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright ©️ 2024 | Designed by Timothy Olofson</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

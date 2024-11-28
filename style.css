@@ -7,6 +7,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  line-height: 1.5;
+  font-size: 16px;  
+}
+
 li {
   list-style-type: none;
 }
@@ -19,11 +24,6 @@ button {
   cursor: pointer;
 }
 
-p {
-  line-height: 1.5;
-  font-size: 16px;  
-}
-
 .title {
   font-size: 100px;
   margin-bottom: 12px;
@@ -31,12 +31,36 @@ p {
   line-height: 1;
 }
 
+input, textarea {
+  width: 100%;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: 1px solid gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 230px;
+  margin-top: 8px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .blue {
-  color: blue;
+  color: blue !important;
 }
 
 .container {
   padding: 50px 0;
+  width: 100%;
 }
 
 .row {
@@ -56,6 +80,34 @@ p {
 
 .click:active {
   transform: scale(0.8);
+}
+
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: black;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
+.link__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 /*
@@ -137,12 +189,12 @@ LANDING PAGE
   content: "";
   width: 4px;
   height: 6px;
-  background-color: #242424;
-  border-radius: 500px;
-  animation: scrollEffect 1000ms infinite alternate-reverse;
+  background-color: black;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
 }
 
-@keyframes scrollEffect {
+@keyframes scroll {
   0% {
     transform: translateY(3px);
   }
@@ -158,8 +210,8 @@ NAVIGATION
 */
 
 #personal-logo {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   filter: invert(1);
 }
 
@@ -189,8 +241,115 @@ nav {
 }
 
 .fa-solid {
-  font-size: 25px;
+  font-size: 16px;
 }
+
+/*
+
+THE MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  width: 90%;
+  max-width: 800px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.modal__half {
+  width: 100%;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__about {
+  background-color: white;
+}
+
+.modal__languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modal__language {
+  width: 25%;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.html5 {
+  right: 28px;
+}
+
+.javascript {
+  right: 42.5px;
+}
+
+.modal__language:hover .language__name {
+  transform: scale(1);
+  transition: all 300ms ease;
+}
+
+.modal__language:hover {
+  filter: brightness(-80%);
+  transform: scale(0.9);
+}
+
+.fa-brands {
+  font-size: 48px;
+}
+
+.language__name {
+  width: 25%;
+  position: absolute;
+  bottom: -10;
+  transform: scale(0);
+  transition: all 300ms ease;
+}
+
+.modal__language--img {
+  width: 100%;
+}
+
+.modal__contact {
+  background-color: black;
+  color: white;
+}
+
+.modal__title {
+  font-size: 24px;
+}
+
+.modal__sub-title {
+  margin: 12px 0 24px 0;
+  font-size: 12px;
+}
+
+.modal__para {
+  margin-bottom: 12px;
+  line-height: 1.75;
+}
+
+.form__item {
+  margin-bottom: 16px;
+}
+
+
 
 /*
 
@@ -206,6 +365,12 @@ My Projects
 
 .project__img {
   width: 100%;
+  transition: all 600ms ease;
+}
+
+.project:hover .project__img {
+  transform: scale(1.07);
+  filter: blur(5px);
 }
 
 .project__wrapper {
@@ -220,6 +385,11 @@ My Projects
   transform: translateY(-50%);
 }
 
+.project__wrapper:hover .project__img {
+  transform: scale(1.07);
+  filter: blur(5px);
+}
+
 .project__description {
   position: absolute;
   top: 50%;
@@ -231,6 +401,10 @@ My Projects
   max-width: 450px;
 }
 
+.project__wrapper:hover .project__wrapper--bg {
+  opacity: 0.7;
+}
+
 .project__wrapper--bg {
   position: absolute;
   top: 0;
@@ -238,7 +412,8 @@ My Projects
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0;
+  transition: all 450ms ease;
 }
 
 .project__description--title {
@@ -257,4 +432,39 @@ My Projects
 
 .project__description--para {
   margin: 16px 0;
+}
+
+/*
+
+My Projects
+
+*/
+
+footer {
+  background-color: black;
+  display: flex;
+  padding: 4% 0;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo--img {
+  width: 75px;
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 400px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social--link,
+.footer__copyright {
+  color: white;
 }
