@@ -14,11 +14,13 @@ Week 4 - Advanced E-Portfolio
   <script src="https://kit.fontawesome.com/83bc4c6e48.js" crossorigin="anonymous"></script>
   <script src="index.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init("NBhrdQIgGtK1W9U0K");
-    })();
-  </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "NBhrdQIgGtK1W9U0K",
+      });
+   })();
+</script>
   <title>Timothy Olofson</title>
 </head>
 <body>
@@ -102,20 +104,20 @@ Week 4 - Advanced E-Portfolio
       <div class="modal__half modal__contact">
         <h3 class="modal__title moddal__title--contact">Let's Have A Chat!</h3>
         <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
-        <form id="contact__form" onsubmit="contact(event)"></form>
+        <form id="contact__form" onsubmit="contact(event)">
           <div class="form__item">
-            <label class="form__item--label">Name</label>
+            <label class="form__item--label" for="name">Name</label>
             <input class="input" id="name" name="user_name" type="text" required>
           </div>
           <div class="form__item">
-            <label class="form__item--label">Email</label>
-            <input class="input" id="email" name="user_email" type="email" required>
+            <label class="form__item--label" for="email">Email</label>
+            <input class="input" id="email" name="user_email" type="email" autocomplete="off" required>
           </div>
           <div class="form__item">
-            <label class="form__item--label">Message</label>
+            <label class="form__item--label" for="message">Message</label>
             <textarea class="input message" id="message" name="message" type="text" required></textarea>
           </div>
-          <button class="form__submit" id="contact__submit" type="submit" onclick="sendForm()">Send it my way!</button>
+          <button class="form__submit" type="submit">Send it my way!</button>
         </form>
         <div class="modal__overlay modal__overlay--loading"><i class="fa-solid fa-spinner"></i></div>
         <div class="modal__overlay modal__overlay--success">Thanks for messaging me! Looking forward to speaking to you soon!!</div>
