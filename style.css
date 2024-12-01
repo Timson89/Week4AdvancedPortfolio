@@ -16,7 +16,7 @@ Week 4 - Advanced E-Portfolio
 }
 
 body {
-  
+
 }
 
 p {
@@ -279,10 +279,18 @@ THE MODAL
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: 1;
+  transition: visiblity 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  visibility: visible;
 }
 
 .modal__half {
