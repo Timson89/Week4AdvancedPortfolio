@@ -34,29 +34,29 @@ Week 4 - Advanced E-Portfolio
     <nav>
       <figure><img id="personal-logo" src="assets/MyE-PortfolioLogo_FES.png" alt="My Logo"></figure>
       <ul class="nav__link--list">
-        <li class="nav__link">
+        <li class="nav__link click">
           <a href="#" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
           ">About</a>
         </li>
-        <li href="#" class="nav__link">
-          <a class="
+        <li class="nav__link click">
+          <a href="#" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
           ">Projects</a>
         </li>
-        <li href="#" class="nav__link">
-          <a class="
+        <li class="nav__link click" onclick="toggleModal()">
+          <a href="#" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
           ">Contact</a>
         </li>
-        <li href="#" class="nav__link click">
-          <a class="
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
@@ -71,7 +71,7 @@ Week 4 - Advanced E-Portfolio
       <div class="header__content">
         <h1 class="title">Hi,</h1>
         <h1 class="title blue">I'm Tim.</h1>
-        <p class="header__para">I'm A <b class="blue">Frontend Software Engineer</b> with A strong passion for building web applications with great user experiences.<br>Here's more <b class="blue">about me.</b></p>
+        <p class="header__para">I'm A <b class="blue">Frontend Software Engineer</b> with A strong passion for building web applications with great user experiences.<br>Here's more <b class="blue click" onclick="toggleModal()">about me.</b></p>
         <div class="social__links">
           <a href="https://www.linkedin.com/in/timothyolofson" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://github.com/Timson89" class="social__link click"><i class="fa-brands fa-github"></i></a>
@@ -79,6 +79,9 @@ Week 4 - Advanced E-Portfolio
         </div>
       </div>
     </header>
+
+    <!-- THE MODAL -->
+
     <button class="mail__btn click" onclick="toggleModal()"><i class="fa-solid fa-envelope"></i></button>
     <a href="#projects" class="scroll"><div class="scroll__icon click"></div></a>
     <div class="modal">
@@ -88,20 +91,21 @@ Week 4 - Advanced E-Portfolio
         <p class="modal__para modal__para--about">I'm A 35 year-old American Frontend Software Engineer with A passion for developing websites with great user experiences.<br>I currently work on extremely difficult and complex engineering problems and learn from A team consisting of some of the most talented nd experienced software engineers everyday.</p>
         <div class="modal__languages">
           <div class="modal__language">
-            <figure class="modal__language--img"><i class="fa-brands fa-html5"></i><span class="language__name html5">HTML5</span></figure>
+            <figure class="modal__language--img"><i class="fa-brands langauge--wrapper fa-html5"></i><span class="language__name html5">HTML5</span></figure>
           </div>
           <div class="modal__language">
-            <figure class="modal__language--img"><i class="fa-brands fa-css3-alt"></i><span class="language__name">CSS3</span></figure>
+            <figure class="modal__language--img"><i class="fa-brands langauge--wrapper fa-css3-alt"></i><span class="language__name">CSS3</span></figure>
           </div>
           <div class="modal__language">
-            <figure class="modal__language--img"><i class="fa-brands fa-js"></i><span class="language__name javascript">JAVASCRIPT</span></figure>
+            <figure class="modal__language--img"><i class="fa-brands langauge--wrapper fa-js"></i><span class="language__name javascript">JAVASCRIPT</span></figure>
           </div>
           <div class="modal__language">
-            <figure class="modal__language--img"><i class="fa-brands fa-react"></i><span class="language__name">REACT</span></figure>
+            <figure class="modal__language--img"><i class="fa-brands langauge--wrapper fa-react"></i><span class="language__name">REACT</span></figure>
           </div>
         </div>
       </div>
       <div class="modal__half modal__contact">
+        <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
         <h3 class="modal__title moddal__title--contact">Let's Have A Chat!</h3>
         <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
         <form id="contact__form" onsubmit="contact(event)">
@@ -122,7 +126,6 @@ Week 4 - Advanced E-Portfolio
         <div class="modal__overlay modal__overlay--loading"><i class="fa-solid fa-spinner"></i></div>
         <div class="modal__overlay modal__overlay--success">Thanks for messaging me! Looking forward to speaking to you soon!!</div>
       </div>
-      <i class="fa-solid fa-xmark modal__exit click"></i>
     </div>
   </section>
   <section id="projects">
